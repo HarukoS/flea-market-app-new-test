@@ -1,25 +1,17 @@
 .detail-page {
-    padding: 80px 66px;
+    padding: 80px 50px;
 }
 
 .item-content {
     display: flex;
-    gap: 10%;
+    gap: 5%;
     flex-wrap: wrap;
-}
-
-@media screen and (max-width: 1431px) {
-    .item-content {
-        display: flex;
-        gap: 5%;
-        flex-wrap: wrap;
-    }
 }
 
 .item-image-wrapper {
     position: relative;
-    width: 600px;
-    height: 600px;
+    width: 520px;
+    height: 520px;
     border-radius: 4px;
     overflow: hidden;
 }
