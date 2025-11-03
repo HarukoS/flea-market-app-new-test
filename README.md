@@ -49,43 +49,41 @@
 
 ### ダミーデータ説明
 ## ユーザー一覧
-  ①鈴木太郎
-  Name: Taro Suzuki
-  Email: user1@gmail.com
-  
-  ②鈴木花子
-  Name: Hanako Suzuki
-  Email: user2@gmail.com
-  
-  ※パスワードは全て"password"
+    1. 鈴木太郎
+       Name: Taro Suzuki
+       Email: user1@gmail.com
+    2. 鈴木花子
+       Name: Hanako Suzuki
+       Email: user2@gmail.com
+    ※パスワードは全て"password"
 
 ## 商品画像
-  商品画像はお手数ですがReleasesの「item_image」のZipファイルをダウンロードしていただき、Storageディレクトリ（src>storage>app>public>item_image）に保存をお願いいたします。
+    商品画像はお手数ですがReleasesの「item_image」のZipファイルをダウンロードしていただき、Storageディレクトリ（src>storage>app>public>item_image）に保存をお願いいたします。
 
 ## Stripe決済
-  Stripe決済画面ではテスト用カード番号「4242 4242 4242 4242」をお使いください。
+    Stripe決済画面ではテスト用カード番号「4242 4242 4242 4242」をお使いください。
 
 ## mailhog
- URL: http://localhost:8025
+    URL: http://localhost:8025
 
 ### PHP Unitテスト環境構築
-  1. MySQLコンテナ上でテスト用データベース作成
-    $ mysql -u root -p
-    > CREATE DATABASE demo_test;
-    > SHOW DATABASES;
-  2. .envファイルをコピーして.env.testingを作成し、環境変数を変更
-    APP_NAME=Laravel
-    APP_ENV=test
-    APP_KEY=
-    APP_DEBUG=true
-    APP_URL=http://localhost
-    DB_CONNECTION=mysql_test
-    DB_HOST=mysql
-    DB_PORT=3306
-    DB_DATABASE=demo_test
-    DB_USERNAME=root
-    DB_PASSWORD=root
-  3. php artisan key:generate --env=testing
-  4. php artisan config:clear
-  5. php artisan migrate --env=testing
-  6. php artisan test --testsuite=Feature
+    1. MySQLコンテナ上でテスト用データベース作成
+        $ mysql -u root -p
+        > CREATE DATABASE demo_test;
+        > SHOW DATABASES;
+    2. .envファイルをコピーして.env.testingを作成し、環境変数を変更
+        APP_NAME=Laravel
+        APP_ENV=test
+        APP_KEY=
+        APP_DEBUG=true
+        APP_URL=http://localhost
+        DB_CONNECTION=mysql_test
+        DB_HOST=mysql
+        DB_PORT=3306
+        DB_DATABASE=demo_test
+        DB_USERNAME=root
+        DB_PASSWORD=root
+    4. php artisan key:generate --env=testing
+    5. php artisan config:clear
+    6. php artisan migrate --env=testing
+    7. php artisan test --testsuite=Feature
