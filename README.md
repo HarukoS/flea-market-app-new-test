@@ -1,3 +1,32 @@
+# "COACHTECH"
+    フリマアプリ「COACHTECH」
+
+## 作成した目的
+    アイテムの出品と購入を行うための独自のフリマアプリを開発したい。
+    他社サービスは機能や画面が複雑で使いづらいため。
+
+## アプリケーションURL
+    - 開発環境：http://localhost/
+    - phpMyAdmin:http://localhost:8080/
+
+## 機能一覧
+    - ユーザー登録（メール認証付き）、ログイン、ログアウト機能
+    - 商品一覧の確認、商品検索、いいね登録/解除、コメント機能
+    - 商品購入機能（支払い方法選択、stripe決済機能、配送先住所変更機能付き）
+    - ユーザープロフィール編集機能（プロフィール画像、ユーザー名、住所）
+    - 商品出品機能
+
+## 使用技術（実行環境）
+    - PHP 8.1
+    - Laravel 8
+    - MySQL 8.0.26
+
+## テーブル設計
+<img width="956" height="1626" alt="image" src="https://github.com/user-attachments/assets/69ec9c8a-44f0-4e94-8944-c6422eb55f04" />
+
+## ER図
+<img width="1121" height="811" alt="er2" src="https://github.com/user-attachments/assets/8dddf936-6024-492e-8f0f-d60b47a3246a" />
+
 ## 環境構築
 
 ### Dockerビルド
