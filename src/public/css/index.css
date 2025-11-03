@@ -47,6 +47,15 @@
     color: black;
 }
 
+@media screen and (max-width: 850px) {
+    .item-name {
+        margin-top: 0px;
+        text-align: left;
+        font-size: 15px;
+        color: black;
+    }
+}
+
 .item-image-wrapper {
     position: relative;
     display: block;
