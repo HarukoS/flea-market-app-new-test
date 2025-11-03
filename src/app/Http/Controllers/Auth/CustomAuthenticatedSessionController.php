@@ -20,7 +20,7 @@ class CustomAuthenticatedSessionController extends Controller
         $user = User::where('email', $request->email)->first();
 
         if (! $user || ! Hash::check($request->password, $user->password)) {
-            return back()->withErrors(['email' => 'ログイン情報が登録されていません。']);
+            return back()->withErrors(['email' => 'ログイン情報が登録されていません']);
         }
 
         if (! $user->hasVerifiedEmail()) {
@@ -32,7 +32,7 @@ class CustomAuthenticatedSessionController extends Controller
         $request->session()->regenerate();
 
         if (empty($user->image) || empty($user->postal_code) || empty($user->address)) {
-            return redirect()->route('profile')->with('message', 'プロフィールを登録してください。');
+            return redirect()->route('profile')->with('message', 'プロフィールを登録してください');
         }
 
         return redirect()->intended('/');

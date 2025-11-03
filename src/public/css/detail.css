@@ -175,10 +175,12 @@
     font-weight: bold;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .label {
     margin-right: 50px;
+    white-space: nowrap;
 }
 
 .item-description,
@@ -193,6 +195,7 @@
     padding: 4px 20px;
     border-radius: 15px;
     margin-right: 15px;
+    margin-bottom: 10px;
     font-size: 20px;
     font-weight: normal;
 }

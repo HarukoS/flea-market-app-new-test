@@ -17,7 +17,7 @@ $hideHeaderNav = true;
     <p class="verify-email__text">
         {{ __('メール認証を完了してください。') }}
     </p>
-    <form class="form__item" method action>
+    <form class="form__item" method="GET" action="http://localhost:8025" target="_blank">
         @csrf
         <button type="submit" class="form__button">
             {{ __('認証はこちらから') }}

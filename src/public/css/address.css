@@ -49,10 +49,16 @@ h2 {
 
 .form__button-submit {
     height: 65.25px;
+    width: 100%;
+    border-radius: 5px;
     border: none;
     background: #FF5555;
     color: #fff;
     cursor: pointer;
     font-size: 26px;
     font-weight: bold;
+}
+
+.form__button-submit:hover {
+    background-color: red;
 }

@@ -88,7 +88,7 @@ Route::get('/email/verify/{id}/{hash}', function (Request $request, $id, $hash) 
     $user = Auth::user();
     $tab = 'recommend';
 
-    return redirect()->route('profile')->with('tab', 'recommend', 'user');
+    return redirect('/')->with('tab', 'recommend', 'user');
 })->name('verification.verify');
 
 Route::get('/login', [CustomAuthenticatedSessionController::class, 'showLoginForm'])
@@ -115,7 +115,7 @@ Route::post('/purchase/{item}/address/update', [PurchaseController::class, 'upda
 Route::post('/purchase/{item}/pre', [PurchaseController::class, 'preStore'])->name('purchase.pre');
 
 Route::prefix('payment')->name('payment.')->group(function () {
-    Route::get('/payment/{item}', [PurchaseController::class, 'payment'])->name('payment'); // Stripe購入ページ表示
+    Route::get('/payment/{item}', [PurchaseController::class, 'payment'])->name('payment'); // Stripe決済ページ表示
     Route::post('/intent', [PurchaseController::class, 'createIntent'])->name('intent'); // Stripe用API
-    Route::post('/store', [PurchaseController::class, 'store'])->name('store'); // Stripe決済完了→DB登録
+    Route::post('/store', [PurchaseController::class, 'store'])->name('store'); // Stripe決済完了
 });

@@ -3,3 +3,6 @@
 /.env
 /storage/
 /docker/mysql/data/
+.env
+.env.*.local
+.env.testing

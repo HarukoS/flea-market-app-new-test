@@ -26,6 +26,12 @@ class ItemController extends Controller
             $query->where('item_name', 'like', "%{$search}%");
         }
 
+        // ログインユーザーがいる場合、自分の商品を除外
+        $user = Auth::user();
+        if ($user) {
+            $query->where('user_id', '<>', $user->id);
+        }
+
         if ($tab === 'mylist') {
             /** @var \App\Models\User|null $user */
             $user = Auth::user();

@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
+use App\Models\Condition;
 
 class ConditionsTableSeeder extends Seeder
 {
@@ -14,24 +14,11 @@ class ConditionsTableSeeder extends Seeder
      */
     public function run()
     {
-        $param = [
-            'condition_name' => '良好',
-        ];
-        DB::table('conditions')->insert($param);
-
-        $param = [
-            'condition_name' => '目立った傷や汚れなし',
-        ];
-        DB::table('conditions')->insert($param);
-
-        $param = [
-            'condition_name' => 'やや傷や汚れあり',
-        ];
-        DB::table('conditions')->insert($param);
-
-        $param = [
-            'condition_name' => '状態が悪い',
-        ];
-        DB::table('conditions')->insert($param);
+        Condition::insert([
+            ['id' => 1, 'condition_name' => '良好'],
+            ['id' => 2, 'condition_name' => '目立った傷や汚れなし'],
+            ['id' => 3, 'condition_name' => 'やや傷や汚れあり'],
+            ['id' => 4, 'condition_name' => '状態が悪い'],
+        ]);
     }
 }

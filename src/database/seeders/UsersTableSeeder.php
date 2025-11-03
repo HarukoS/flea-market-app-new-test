@@ -15,19 +15,21 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         $param = [
+            'id' => 1,
             'name' => '鈴木太郎',
             'email' => 'user1@gmail.com',
-            'email_verified_at' => '2025-10-25 00:00:00',
-            'created_at' => '2025-10-25 00:00:00',
+            'email_verified_at' => now(),
+            'created_at' => now(),
             'password' => bcrypt('password'),
         ];
         DB::table('users')->insert($param);
 
         $param = [
+            'id' => 2,
             'name' => '鈴木花子',
             'email' => 'user2@gmail.com',
-            'email_verified_at' => '2025-10-25 00:00:00',
-            'created_at' => '2025-10-25 00:00:00',
+            'email_verified_at' => now(),
+            'created_at' => now(),
             'password' => bcrypt('password'),
         ];
         DB::table('users')->insert($param);
